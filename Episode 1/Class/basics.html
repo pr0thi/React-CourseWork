@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+<body>
+
+    <!-- <div id="root">
+        <h1>Hello World!</h1>
+    </div> -->
+
+
+    <div id="root">
+        <!-- Rendering Hello world through JS -->
+        <!-- <script>
+
+            const heading = document.createElement("h1");
+            // h1 is tag 
+            heading.innerHTML = "Hello from JavaScript!";
+            // putting heading inside the div root using append child
+            const root = document.getElementById("root");
+
+            root.appendChild(heading);
+            //to inject the heading inside the div 
+            //browser already has javascript engine under it but it can't understand react
+
+        </script> -->
+    </div>
+<!-- 
+    method 1 to import react to our project
+
+    open link to find JS Library
+!-->
+    <!-- Core file of react where code is written (library) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- DOM Operations  -->
+    <!-- why 2 different files? 
+    Because it is used across different devices (bridge to connect)  -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</body>
+</html>
