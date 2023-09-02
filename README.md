@@ -14,5 +14,3 @@ npx parcel index.html or change in scripts under npm start
 npm start/ npm run 
 
 npm i react-router-dom
-
-hey there 
