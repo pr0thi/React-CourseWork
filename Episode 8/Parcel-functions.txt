@@ -1,0 +1,33 @@
+Functions of Parcel 
+- Dev Build 
+- Local Server 
+- HMR - Hot Module Replacement (no page reload required)
+- Parcel uses a file watching algorithm which is written in C++
+- how does it takes less time to build? because of Cache => Faster Builds 
+- Image optimization 
+- Minification of files as well 
+- Bundling 
+- Compressing of files 
+- Consistent Hashing 
+- Code Splitting i.e splitting your files 
+- Differential Bundling Parcel takes care of different browsers and different older browsers 
+- Diagnostic behind your scenes 
+- Error Handling 
+- SSL support, HTTPS 
+- Tree Shaking (remove unused code for us)
+- Different Dev and Production bundles 
+
+for dev build use npx index.html
+for Production use npx build index.html (before that refer to package.json)
+
+// "main": "App.js", remove this for build while using npx build
+
+dist folder gets created which was compressed using tree shaking 
+name of variables are also changed due to compression
+
+
+
+We need a lot more things apart from react like bundlers which is making it fast 
+
+PM Modi is React and Amit Shah is Parcel 
+Other ministers as packages 
