@@ -1,4 +1,4 @@
-# namaste-react
+# namaste-react coursework
 repo containing all the course work from namaste react course by Akshay Saini
 
 npm i -y
