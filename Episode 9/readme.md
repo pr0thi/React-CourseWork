@@ -1,7 +1,6 @@
 Topics in this lec :
 
--custom hooks
-restaurantMenu fetch to custom hook
+- custom hooks : restaurantMenu fetch to custom hook
 
 - online status to custom hook
 
