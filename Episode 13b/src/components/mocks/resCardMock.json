@@ -1,0 +1,16 @@
+{
+    "id": "37067",
+                  "name": "Subway",
+                  "cloudinaryImageId": "1ace5fa65eff3e1223feb696c956b38b",
+                  "locality": "Kilpauk",
+                  "areaName": "Poonamallee High Road",
+                  "costForTwo": "₹350 for two",
+                  "cuisines": [
+                    "Salads",
+                    "Snacks",
+                    "Desserts",
+                    "Beverages"
+                  ],
+                  "avgRating": 4.1,
+                  "promoted": false
+}
