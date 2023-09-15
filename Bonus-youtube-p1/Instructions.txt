@@ -1,0 +1,215 @@
+It's simple 
+Just revison in fast pace 
+
+
+sabse pehle create react app coz it'll include everything 
+
+uske baad app.js mai jo bhi hai delete krlo 
+
+starting from scratch 
+
+fhir Tailwind ko configure krlo project mai aur test bhi karlo 
+configure ke ander [js,ts] etc ke file mention krna hai 
+
+uske baad start from project 
+
+sabse pehle bilkul basics, components socho kya kya honge 
+
+So app ke ander we have this Head Component as Header 
+and a Body component 
+
+Body ke ander we have 2 sub parts 
+    -SideBar 
+    -MainContainer 
+
+Therefore structure hoga kuch aise 
+Header 
+Body 
+    -SideBar 
+    -MainContainer 
+
+Theek, ab eske baad let's start off with header 
+<div>//parent div
+    //baaki components as other divs 
+
+    so we had this 
+
+    hamburger symbol 
+    youtube ka logo clubbed as one 
+    and so web has 12 sections in grid 
+    hum esko 1/12 space allot krdenge 
+
+
+    uske baad, center vaala component jo ki mera search hai taking up 10/12 
+    Search ki styling kri hai by making it rounded ek side se hii, aur doosra logo bhi rounded-right krke 
+
+    and last mai user profile 
+
+</div>
+
+ab aate hai sidebar component 
+ab sidebar aur videos I want side by side, thereby making it flex 
+
+pehle sidebar bana diya <li> </li>
+
+ab yahan se you have to revise and add sidebar functionality 
+
+//Install redux store and setup 
+npm i @reduxjs/toolkit
+npm i react-redux 
+
+acha toh ab utils ka folder create kiya jiske ander store setup kiya hai 
+import {createSlice} from "@reduxjs/toolkit";
+pehle appSlice create kiya jiske ander saare reducers yaani functions hai like toggle ke  aur uske baad usse export kiya hai into 
+store.js as a single reducer bundled fhir project mai use kiya hai 
+import { configureStore } from "@reduxjs/toolkit";
+import appSlice from "./appSlice";
+
+ab humne store ko app se connect kra hai 
+import store from "./utils/store";
+import { Provider } from "react-redux";
+
+function App() {
+    return( 
+      <Provider store={store}>
+      <div>
+      
+      <Head />
+      <Body />
+
+      </div>
+      </Provider>
+      );
+}
+
+poore app ko humne wrap krdiya uss store mai taaki kahin se bhi access kr sake hai, yeh ek big app ka feature hai 
+
+ab hum app mai use krenge, yaani Header mai pehle function invoke krenge dispatcher ke through useDispatch ke through 
+ki jab user hamburger menu icon par click krega toh band ho jaayga sidebar 
+import { toggleMenu } from '../utils/appSlice';
+import { useDispatch } from 'react-redux';
+
+
+const dispatch = useDispatch();
+    //dispatching action of clicking 
+    //dispatch is a hook coming from react-redux library 
+
+    const toggleMenuHandler = ()=>{
+        dispatch(toggleMenu());
+        //no need to pass as it does not takes anything 
+        //doesn't have any payload 
+
+        //now according to the state I've to make changes to UI 
+        
+    };
+
+
+
+ab mai jaaonga apne SideBar mai 
+import React from 'react'
+import { useSelector } from 'react-redux'
+
+const Sidebar = () => 
+    const isMenuOpen = useSelector(store => store.app.isMenuOpen);
+    //you have to subscribe to only isMenuOpen not all store 
+
+    //early return pattern 
+    if(!isMenuOpen) return null;
+
+    return (
+        //aage ka 
+    )
+
+Ab hum MainContainer construct krenge 
+sabse pehle button banayenge ek button aur uske ander ek prop paas krdenge buttonList ke through jahan list of buttons honge 
+{name} destructure hua hai parent se yaani buttonList se 
+
+eske baad hum Video Container baayenge 
+vahan pehle API fetch ka dekhenge 
+https://console.cloud.google.com/apis/api/youtube.googleapis.com/metrics?project=bustling-surge-399019
+https://stackoverflow.com/questions/40355794/access-not-configured-youtube-data-api-has-not-been-used-in-project-60894180825
+https://console.cloud.google.com/apis/dashboard?project=bustling-surge-399019&supportedpurview=project
+
+yahan se api fetch krke aur auth banakr const folder mai sabkuch daaldenge fhir baad mai import krlenge container mai 
+video container mai fetch krlenge useEffect se 
+
+uske baad ek stateVariable banayenge jismai yeh data pass karenge jiski starting state null rahegi 
+naam video hai var ka, setvideo kakre function hai 
+ return <div className='flex flex-wrap'>
+    {videos.map(video=><VideoCard key={video.id} info={video}/>)}
+    //key denge kyuki yeh map use kr rhe hai     
+  </div>
+
+  info={video} prop hai jo pass hoga restaurant card mai 
+
+  restaurant card ko style krenge aur uske baad render krlenge 
+
+  acha max videos ko = 50 krdenge taaki zyaada display ho 
+  region ko IND krdenge coz why not, abhi filhaal AUS hai :')
+  regionCode=AU&key="+GOOGLE_API_KEY;
+  
+
+
+last 20 mins of video 
+Routing ki majorly 
+router install kiya pehle 
+fhir App mai gaye, router import kiya 
+ab mujhe Header toh same rakhna hai toh usko wrap nahi kiya aur bus body ko Provider se change krdiya
+
+const appRouter = createBrowserRouter([
+  {
+    path:"/",
+    element:<Body/>,
+    children:[{
+      path:"/",
+      element:<MainContainer/>
+    },
+    {
+      path:"watch",
+      element:<WatchPage/>
+    },  
+  ]
+  }
+])
+
+body mai outlet define krenge jo baad mai change ho jaayga according to the route 
+
+yeh mera appRouter jo header ke neeche import krenge Provider tag ke through 
+esmai Mere paas array of routes honge 
+Pehla Home Route 
+ab body mai bhi I've 2 components 
+     - Video Container 
+     - Watch Page 
+
+ab Watch Page component build krenge 
+Toh pehle SideBar ko close krna hai, uske liye ReduxStore mai ek aur Reducer add krdenge jiski value byDefault Close set krdenge 
+
+closeMenu:(state)=>{
+            state.isMenuOpen = false;
+        }
+
+esko export krlenge aur apne WatchPage mai call krlenge 
+dispatch krlenge jab bhi watchPage mai route hoga 
+dispatch hokr, function invoke hoga aur sidebar close ho jaayga 
+
+ab Link tag daal denge 
+ek daala hai Video Container so that when you click on the container you get redirected to the video watch link id se map krdiya
+ek daal diya Home side bar mai 
+
+
+uske baad, hum Watch Page mai useSearchParams ka usekrke url se id extract krenge 
+yeh ek hook hii hai, read about it 
+
+ab end mai video ko embedd krdenge, youtube mai ek random video open krke vahan se embed ka link lekr usko modify krdenge 
+
+---End of Part 1 
+
+
+
+
+
+
+
+
+
+
