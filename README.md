@@ -15,4 +15,3 @@ npm start/ npm run
 
 npm i react-router-dom
 
-npx create react-app 'name'
