@@ -1,0 +1,22 @@
+on the right side let's build a chat 
+
+//watch page component 
+w-full krdena parent ko bhi 
+
+Redux Store to append the data chat 
+
+chat slice building 
+adding the slice to store
+
+useeffect into the LiveChat to send msgs to store 
+
+//css fixed for scroll in ChatSlice 
+
+unshift JS into reducer 
+
+export const LIVE_CHAT_COUNT = 10;
+in constants is how many live comments you wish to see and delete the last after 10
+
+eske baad custom comments passing through dispatch() taaki array mai add ho jaay aapka comment aur display ho jaay 
+
+
