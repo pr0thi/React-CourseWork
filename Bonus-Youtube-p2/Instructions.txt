@@ -1,0 +1,46 @@
+http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=Query
+search api added 
+
+now trying to build debouncing 
+
+input box, head.js 
+how to make it work?
+tie it/bind it with a state variable 
+
+key - i
+    - render the component 
+    - calls Use Effect 
+    - now here it'll start a time and it'll make an API call after 200ms 
+
+    -iP (P after i)
+    - destroy the component(), useEffect method will be called  
+    - a gain rerenders the component 
+    - again calls useEffect
+    - now here timer is same? or different 
+    - new timer 
+
+    when we set a setTimeout we need to clear that also 
+
+    
+    absolute to make it fix 
+
+
+making a cache slice 
+using map data structure and spread operator 
+making reducers and exporting reducer 
+
+adding the slice to store  
+const store = configureStore({
+    reducer:{
+        app:appSlice,
+        search:searchSlice,
+    },
+});
+
+now header component
+
+recursion to create more comments 
+comments mai humne map aur array + objects use krke iterate kre hai 
+
+
+

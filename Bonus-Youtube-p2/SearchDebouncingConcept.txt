@@ -1,0 +1,59 @@
+Higher Order Component recieves a component and returns a component 
+
+Video Card eg 
+creation of a Higher Order function returning borders 
+
+//AdVideoCard showing ads 
+
+//Search is the most important thing 
+
+//Develop Search bar 
+
+//Study search first 
+
+//typing depends 
+// letter by letter if typing slow 
+// 3 api calls for 7 keystrokes 
+// z, zx, zxcvbnm
+
+//Flipkart is not making api call on every keypress, unlike 
+youtube which if typing slow will call api in every keystroke 
+
+//This concept is called as Debouncing 
+
+//if typing very fast, skipping some of the events 
+
+//if typing very slow, it'll make api call for each keypress
+
+How are we able to achieve this?
+
+Concept - Debouncing:
+
+if you're typing very fast, the difference between two keypress is very less - 30ms say
+if slow, difference is high say - 200ms 
+
+if you're typing very fast, do you think users need suggestions? 
+//useless to call API for every keystroke 
+
+Performance:
+    -iPhone Pro Max 
+    14 letters 
+
+    if 1000ppl typing, 14000 api calls 
+    with debounding, we maybe just made, 3*1000 = 3000
+
+why are they showing suggestions? for better UX 
+
+in Flipkart debouncing is applied with 200ms
+- if difference between 2 keystrokes is less than 200ms -> Not call the API 
+
+if greater than 200ms, make an API call and show the results 
+
+Now compare Flipkart and Youtube, debouncing is very less in YT 
+why debouncing is very less, faster apis of google 
+
+
+
+
+
+
