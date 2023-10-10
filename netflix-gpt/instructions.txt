@@ -1,0 +1,27 @@
+#netflix-gpt 
+
+create-react-app appname
+    delete everything in app.js 
+configuring tailwind css 
+
+npm i -D react-router-dom
+
+routing is done under the body component 
+
+import { createBrowserRouter } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
+
+appRouter has been made inside of the body function and it has been provided to routerprovider 
+
+
+absolute
+netflix ka logo overlap krne ke liye aur transparent krne ke liye 
+
+after header 
+login form 
+
+same form for signin and signup
+
+
+formik library for field validation 
+
