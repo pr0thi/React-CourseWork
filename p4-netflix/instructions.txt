@@ -1,0 +1,43 @@
+npm i -D @reduxjs/toolkit
+
+npm i react-redux 
+
+build store in utils 
+    -building appStore with reducer
+
+    -creating slices and provide to appstore 
+
+    -on root level provide the store 
+
+    -provide the app store to the provider 
+
+onAuthStateChange utility by firebase 
+    - api is called whenever there is an authentication state change (sign in, sign up, logout etc.)
+    - kind of an event listener 
+
+at app level or body.js 
+log in log out mai if else ke through store functions daal diye 
+
+ab when user sign in, you have to navigate him to Browse Page 
+use UseNavigate() hook, comes from React Router Dom 
+
+use navigate inside the <Route> only </Route>
+
+move router out -> navigate it from childen "Login"
+
+adding header in our Browse page 
+giving header full screen 
+adding profile icon and sign out 
+
+now find sign out api 
+on click of button handle sign out 
+
+now user profile 
+calling out UserProfile api
+
+
+implemented sign out feature 
+
+update profile API Call 
+
+implemented userupdate() from firebase api 
