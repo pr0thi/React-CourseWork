@@ -1,0 +1,28 @@
+make html file
+make boilerplate
+understand live server
+
+- tag
+- h1....h6
+- p
+- br
+- img
+- a
+- div
+- id
+- class
+- span (extra)
+
+boilerplate code -> necessary code
+
+< > = tag
+closing and opening tag
+
+alt : optional
+
+div is a rectagular box with w-full h-none
+div ki height apni children ke height ke barabar ke hoti hai -> total height of children
+
+id cannot be repeated, it will work but it's not a good practice
+
+=> class can be repeated

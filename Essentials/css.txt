@@ -1,0 +1,62 @@
+understanding css -> Styling 
+mkaing css file 
+understanding linking
+css boilerplate 
+understanding the css writing way -> Targeting
+understanding width, height 
+understanding units, px, % 
+    1/2, 1/3, 1/4 of screen -> Use % (when we can't predict)
+    px - fixed value -> Parent ke respect mai chalti hai 
+
+margin -> Clockwise Top -> Right -> Bottom -> Left
+
+margin -> 2 elements ke beech mai space 
+padding -> Ek hii element ke ander space -> Imaginary element inside the element 
+
+padding -> Ander space banata hai, Margin -> Bahar space banata hai 
+
+setting bg image 
+
+set background-size : cover
+background-position: bottom; 
+which part to be viewed?
+
+absolute -> upar uth jaayga 
+jo bhi jagah khaali hogi, agla element aage aa jaayga
+top se dekhenge toh sirf upar vaala dikhega 
+jo uthega apni individual layer mai uthega 
+
+ek board aur cube 
+cube ko board ke ander rakhna hai 
+board ko relative banayenge 
+jiske bhi ander element ko rakhna hota hai usko relative position banate hai 
+
+
+top, left properties tabhi chalta hai jab position lagaya ho -> Position ke case mai chalti hai 
+
+position: Sticky, static, fixed, abs, relative
+static is bydefault 
+
+
+jiske ander rakhna ho, usko relative rakh do 
+chote box ko bade box ke Ander
+
+Parent ko label as display flex jiske ander 3 div hai 
+
+2 Margins 
+align items -> Height par kaam karne ke liye 
+justify content -> Width par kaam krne ke liye 
+
+justify-content: space-between; center, right, space-around (3 ke beech)
+
+
+
+
+
+
+
+
+
+
+
+
